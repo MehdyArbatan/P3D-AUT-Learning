@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\accoremgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Acdbmgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\acdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Acmgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnP3dObjectsMgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\PLNT3D\PnP3dObjectsMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPDataLinks">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\PnPDataLinks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPDataObjects">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\PnPDataObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PnPProjectManagerMgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2026\PLNT3D\PnPProjectManagerMgd.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
