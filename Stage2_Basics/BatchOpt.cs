@@ -25,17 +25,22 @@ namespace Stage2_Basics
             Editor ed = doc.Editor;
 
             TypedValue[] tvs = new TypedValue[1];
-            //TypedValue is the object associated with AutoCad search rules
-            //and you are saying that you need an array of it with only 1 member
+            /*TypedValue is the object associated with AutoCad search rules.
+            To explain more, it is a class that represents a single search criterion used in filtering objects in AutoCAD.
+            and you are saying that you need an array of it with only 1 member
+            Increasing the members is equivalent to adding more rules to the search criteria.
+            For example, if you want to search for pipes with a specific size and spec, you would add another TypedValue to the array with the appropriate property and value.*/
 
             tvs[0] = new TypedValue((int)DxfCode.Start, "*Pipe");
-            //now you are creating the first rule with TypedValue and it needs a pair of data:
-            //The property to check and the value to check for.
-            //In this case, you are saying that you want to check the "Start" property of the object
-            //and see if it is equal to "*Pipe", which is the name of the pipe object in AutoCAD
+            /*now you are creating the first rule with TypedValue and it needs a pair of data:
+            The property to check and the value to check for.
+            In this case, you are using the DxfCode.Start property, which represents the type of object in AutoCAD.
+            Some other properties are for example DxfCode.Layer, DxfCode.Color, DxfCode.Handle, etc.
+            So all in all, we are starting to filter PIPE components here*/
 
             SelectionFilter PipeFilter = new SelectionFilter(tvs);
-            //now you are creating a SelectionFilter object with the array of TypedValue as the argument
+            //now you are creating a SelectionFilter object with the array of TypedValue as the argument.
+            //What this holds is the filter criteria for selecting objects in the drawing.
 
             PromptSelectionResult SelRes = ed.SelectAll(PipeFilter);
             //now you are using the Editor object to select all objects in the drawing that match the filter criteria

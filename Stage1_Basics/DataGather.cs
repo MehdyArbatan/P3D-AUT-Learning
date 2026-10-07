@@ -55,6 +55,8 @@ namespace Stage1_Basics
             int rowID = dlm.FindAcPpRowId(ResultedEntity.ObjectId);
             //FindAcPpRowId is a method of the DataLinksManager class that takes an ObjectId as input
             //and returns the corresponding row ID from the datalink table.
+            //difference between ObjectId and RowID: ObjectID is a unique identifier for an entity in the AutoCAD drawing,
+            //while RowID is a unique identifier for a row in the datalink table associated with that entity.
 
             if (rowID > 0)
             {
@@ -62,12 +64,12 @@ namespace Stage1_Basics
                 //This is a List of Lists that contains all the P3D properties of the selected object.
                 //The first string is the property name and the second string is the property value.
 
-                foreach (var prop in AllProps)
+                /*foreach (var prop in AllProps)
                 {
                    ed.WriteMessage($"\nProperty Name: {prop.Key}, Property Value: {prop.Value}");
-                }
+                }*/
 
-                /*StringCollection labels = new StringCollection();
+                StringCollection labels = new StringCollection();
                 labels.Add("Size");
                 labels.Add("Spec");
                 labels.Add("LineNumberTag");
@@ -75,12 +77,13 @@ namespace Stage1_Basics
                 //so we need to convert our desired strings into a "StringCollection".
 
                 var results = dlm.GetProperties(rowID, labels, true);
+                //GetProperties is a method of the DataLinksManager class that takes a row ID, a StringCollection of property names, and a boolean indicating whether to include inherited properties.
 
                 ed.WriteMessage($"\n---Selected elements properties---");
                 ed.WriteMessage($"\nSize: {results[0]}");
                 ed.WriteMessage($"\nSpec: {results[1]}");
                 ed.WriteMessage($"\nLine Number: {results[2]}");
-                //0, 1 & 2 are the exact order of properties you asked when you created the "labels" StringCollection.*/
+                //0, 1 & 2 are the exact order of properties you asked when you created the "labels" StringCollection.
 
             }
             else return;

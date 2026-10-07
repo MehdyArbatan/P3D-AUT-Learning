@@ -47,7 +47,7 @@ namespace Stage0_Basics
                         ent.TransformBy(Matrix3d.Displacement(MoveVector));
                         // TransformBy applies a transformation to the entity.
                         // In this case, we are applying a displacement transformation that moves the entity by the specified vector.
-
+                        
                         tr.Commit();
                         // Commit the transaction to save changes to the database.
                         // If this line is not reached, the transaction will be rolled back automatically when it goes out of scope.

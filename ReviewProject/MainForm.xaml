@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ReviewProject.MainForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReviewProject"
+             mc:Ignorable="d">
+    <Grid x:Name="MainGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#1A2530" Offset="1"/>
+                <GradientStop Color="#636E72" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBox    x:Name="LineNotxtbx"    FontFamily="Lucida Bright" FontSize="13" Padding="2"    Margin="0,0,5,0"    Width="200" Text="Line Number..."   />
+            <Button     x:Name="Searchbtn"      FontFamily="Lucida Bright" FontSize="13" Padding="5,2"  Margin="0,0,5,0"    Content="Find" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+            
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <Button     x:Name="Dismissbtn"      FontFamily="Lucida Bright" FontSize="13" Padding="5,2"  Margin="0,0,5,0"    Content="Dismiss" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>
